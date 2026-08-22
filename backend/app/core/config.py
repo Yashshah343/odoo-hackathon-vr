@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "supersecret_hackathon_key_change_in_production"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7 # 7 days
+    REFRESH_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 30 # 30 days
 
     class Config:
         env_file = ".env"

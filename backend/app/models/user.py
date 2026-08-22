@@ -18,4 +18,5 @@ class UserModel:
         user_dict = user.model_dump(exclude={"password"})
         user_dict["hashed_password"] = hashed_password
         user_dict["role"] = "user"
+        user_dict["refresh_tokens"] = [] # Store active refresh token JTIs for rotation
         return user_dict
