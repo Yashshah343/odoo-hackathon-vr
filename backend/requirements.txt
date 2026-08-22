@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+motor
+pydantic
+pydantic-settings
+pydantic[email]
+python-decouple
+PyJWT
+passlib[bcrypt]
+pytest
+pytest-asyncio
+httpx
