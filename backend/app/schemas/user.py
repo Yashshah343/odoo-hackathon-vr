@@ -1,5 +1,5 @@
 from pydantic import BaseModel, EmailStr, Field
-from typing import Optional
+from typing import Optional, List
 
 # ----------------- User Schemas -----------------
 class UserBase(BaseModel):
@@ -9,7 +9,10 @@ class UserBase(BaseModel):
     phone: Optional[str] = None
     city: Optional[str] = None
     country: Optional[str] = None
+    bio: Optional[str] = None
     photo_url: Optional[str] = None
+    language_preference: Optional[str] = "English"
+    saved_destinations: List[str] = []
 
 class UserCreate(UserBase):
     password: str = Field(..., min_length=6, example="securepassword123")
